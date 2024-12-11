@@ -40,47 +40,12 @@ nav ul li a:hover {
     color: #f4b400;
 }
 
-/* Hamburger Menu */
-.hamburger {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
-.hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: black;
-    transition: transform 0.3s ease;
-}
-
-/* Hidden Nav for Mobile */
-.nav-links {
-    list-style: none;
-    padding: 10px;
-    background-color: #007bff;
-    border-radius: 5px;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.nav-links.mobile-visible {
-    display: flex;
-}
-
-.nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-#welcome-section {
+#hero {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,13 +56,102 @@ nav ul li a:hover {
     animation: fadeIn 3s ease-in-out;
 }
 
-.welcome-text h1 {
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.hero-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.hero-content .btn {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.image-container .btn:hover {
+    background-color: #3e8e41;
+}
+
+.spiral-arrow {
+    display: flex;
+    justify-content: center;
+}
+
+.spiral-svg {
+    width: 50px;
+    height: 100px;
+}
+
+.hero-content h1 {
     font-size: 2rem;
 }
 
-.welcome-text p {
+.hero-content p {
     font-size: 1rem;
     transition: background-color 0.3s ease;
+}
+
+#hero .btn {
+    background: white;
+    color: #4caf50;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+/* Skills Section */
+#skills {
+    padding: 60px 20px;
+    text-align: center;
+}
+.skill-bars .skill {
+    margin-bottom: 20px;
+}
+.progress {
+    background: #ddd;
+    height: 20px;
+    width: 70%;
+    margin: 10px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.bar {
+    height: 100%;
+    border-radius: 10px;
+    background: #4caf50;
+    animation: fill 2s ease-in-out;
+}
+.bar.html {
+    width: 90%;
+}
+.bar.css {
+    width: 80%;
+}
+.bar.js {
+    width: 60%;
+}
+@keyframes fill {
+    from {
+        width: 0;
+    }
+    to {
+        width: inherit;
+    }
 }
 
 #projects {
@@ -151,11 +205,19 @@ nav ul li a:hover {
     font-size: 14px;
 }
 
+.project-tile img {
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+}
+
 #about {
     padding: 40px 20px;
-    text-align: center;
     background: #f3f3f3;
+    text-align: justify;
 }
+
 /*Footer section*/
 footer {
     text-align: center;
@@ -326,4 +388,4 @@ footer p a:hover {
         opacity: 1;
         transform: translateY(0);
     }
- }
+}
